@@ -1,0 +1,179 @@
+/*  Vamos a buscar inspiración en los diseños de páginas de
+      https://dribbble.com/
+*/
+/*  Vamos a importan fuentes desde (usaremos 'Ubuntu'):
+     https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+}
+
+html {
+  background-color: #161717;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* espacio entre las líneas */
+  width: 450px;
+}
+
+.buttons {
+  align-self: flex-start; /* para que sólo afecte a este elemento de todo el flex */
+  display: flex;
+  gap: 20px;
+}
+
+/* Con la extensión de Google 'ColorPick Eyedropper',
+  podemos saber de qué color exacto es un elemento de una web */
+.google-btn {
+  background-color: #1A73E8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  display: flex; /* para ver el cuadradito de la imagen en el botón */
+  align-items: center; /* centrado vertical del cuadradito */
+  padding: 3px;
+  cursor: pointer; /* pone el cursor de la manita */
+}
+
+.google-btn:hover {
+  opacity: 0.75;
+}
+
+.google-btn picture {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-btn picture img {
+  width: 90%;
+}
+
+.google-btn span {
+  color: white;
+  font-weight: 500; /* cuánto de negrita pongo a la fuente */
+  padding: 15px;
+}
+
+.twitter-btn {
+  color: #bbb;
+  background-color: #eee;
+  border: none;
+  width: 60px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.twitter-btn:hover {
+  background-color:#ddd;
+}
+
+.separator {
+  display: flex;
+  width: 100%; /* que ocupe el ancho de la ventana */
+  gap: 15px; /* que los elementos se separen un poco entre ellos */
+}
+.separator hr {
+  flex-grow: 1; /* para que las líneas hr ocupen todo el espacio de la ventana */
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.separator span {
+  color: #8b8b8b;
+}
+
+.section-inputs {
+  display: flex;
+  gap: 20px;
+  width: 100%; /* no aprecio ninguna diferencia con este */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 30px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* al cambiar a columna, esta separación ahora 
+                es con el título que se queda arriba */
+  
+}
+
+label span {
+  font-weight: 700; /* cuánta negrita tendrán los títulos de los inputs */
+}
+
+.section-inputs label input {
+  width: 80%;
+  background-color: #212121;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none; /* no veo qué hace */
+  font-size: 14pt;
+}
+
+label input {
+  width: 90%;
+  background-color: #212121;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none; /* no veo qué hace */
+  font-size: 14pt;
+  transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+}
+
+/* separados por comas, es un OR (o hover o focus) */
+label input:hover, :focus {
+  background-color: #454045;
+  border: solid 1px #f3f3f4;
+  box-shadow: 0 0 10px #391010; /* 1º X - 2º Y - 3º SOMBRA */
+}
+
+.checkbox-label {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;  /* tamaño de la casilla de verificación */
+}
+
+.checkbox-label span {
+  font-weight: 400;
+}
+
+.submit-btn {
+  background-color: #ea4c89;
+  color: white;
+  font-weight: 500;
+  font-size: 12pt;
+  text-align: center; /* no veo que cambio al quitarlo */
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  opacity: 0.75;
+}
