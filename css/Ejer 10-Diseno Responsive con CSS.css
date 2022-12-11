@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  padding: 0.2rem;
+  margin: 0rem;
+  min-height: 93vh;
+  border: solid 0.5rem rgb(86, 72, 78);
+}
+
+.menu {
+  background-color: rgb(86, 72, 78);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item {
+  background-color: rgb(203, 186, 201);
+  padding: 0.5rem;
+  width: 3rem;
+  border: solid 0.25rem rgb(251, 249, 249);
+}
+
+.principal {
+  background-color: rgb(203, 186, 201);
+  padding: 0.5rem;
+  flex-grow: 5;
+}
+
+@media (max-width: 640px) {
+  body {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 640px) {
+  .menu {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
